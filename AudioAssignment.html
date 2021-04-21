@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<title>Audio Assignment</title>
+	
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script>
+
+<style>
+.progressbar {
+  width: 80%;
+  background: #ddd;
+  margin: calc(50vh - 30px) auto;
+  text-align: center;
+  margin-bottom: 113px;
+  margin-top: 182px;
+  
+}
+
+.progress {
+  width: 1px;
+  height: 3px;
+   background: #DA70D6;
+  transition: width .1s linear;
+}
+.message1 {
+    margin: 316px 1152px -332px 269px;
+    border-radius: 7px;
+    background: #00FF00;
+    color: #ffff;
+	
+}
+.msgbar1
+{
+    margin: 329px 1219px -262px 317px;
+    background-color: #00FF00;
+    height: 72px;
+    width: 2px;
+    
+}
+.circle1
+{
+    background-color: #00FF00;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    margin-top: 260px;
+    margin-left: -898px;
+    margin-bottom: -494px;
+}
+
+
+.message2 {
+    margin: 316px 995px -332px 433px;
+    border-radius: 7px;
+    background: #50C878;
+    color: #ffff;
+}
+.msgbar2
+{
+    margin: 329px 1219px -262px 475px;
+    background-color: #50C878;
+    height: 148px;
+    width: 2px;
+    
+}
+.circle2
+{
+    background-color: #50C878;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    margin-top: 260px;
+    margin-left: -585px;
+    margin-bottom: -278px;
+}
+
+.message3 {
+    margin: -26px 128px -332px 1135px;;
+    border-radius: 7px;
+    background: #4F7942;
+    color: #ffff;
+}
+.msgbar3
+{
+    margin: 329px 1219px -262px 1333px;
+    background-color: #4F7942;
+    height: 247px;
+    width: 2px;
+    
+}
+.circle3
+{
+    background-color: #4F7942;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    margin-top: 260px;
+    margin-left: 1130px;
+    margin-bottom: -159px;
+}
+
+
+.message4 {
+   margin:-197px 236px -332px 1028px;
+    border-radius: 7px;
+    background: #900C3F;
+    color: #ffff;
+}
+.msgbar4
+{
+    margin: 329px 1219px -262px 1283px;
+    background-color: #900C3F ;
+    height: 166px;
+    width: 2px;
+    
+}
+.circle4
+{
+    background-color: #900C3F ;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    margin-top: 260px;
+    margin-left: 1028px;
+    margin-bottom: -159px;
+}
+
+
+
+.message5 {
+   margin: 29px 249px -331px 1183px;
+    border-radius: 7px;
+    background: #0000CD;
+    color: #ffff;
+}
+.msgbar5
+{
+    margin: 329px 1219px -262px 1228px;
+    background-color: #0000CD;
+    height: 98px;
+    width: 2px;
+    
+}
+.circle5
+{
+    background-color: #0000CD;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    margin-top: 260px;
+    margin-left: 923px;
+    margin-bottom: -159px;
+}
+
+.msgbar6
+{
+    margin: -260px 1219px -262px 1157px;
+    background-color: #50C878;
+    height: 247px;
+    width: 2px;
+    
+}
+.circle6
+{
+    background-color: #50C878;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    margin-top: 260px;
+    margin-left: 779px;
+    margin-bottom: -159px;
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+<center>
+<div class="message1">
+  Introduction
+</div>
+<div class="msgbar1">
+
+</div>
+<div class="circle1">
+
+</div>
+ <div class="message2">
+  one_six
+</div>
+<div class="msgbar2">
+
+</div>
+<div class="circle2">
+
+</div>
+ 
+ <div class="message3">
+  Rapport Building - Energy
+</div>
+<div class="msgbar3">
+
+</div>
+<div class="circle3">
+
+</div>
+ <div class="msgbar6">
+
+</div>
+<div class="circle6">
+
+</div>
+<div class="message4">
+  Rapport Building - Empattry
+</div>
+<div class="msgbar4">
+
+</div>
+<div class="circle4">
+
+</div>
+
+
+<div class="message5">
+  Profile
+</div>
+<div class="msgbar5">
+
+</div>
+<div class="circle5">
+
+</div>
+
+<script>
+var canvas = document.createElement('canvas');
+var x = 10;
+var t = 100;
+var i = 1.3;
+canvas.id = "CursorLayer";
+canvas.width = 5000;
+canvas.height = 200;
+canvas.style.zIndex = 8;
+canvas.style.position = "absolute";
+
+canvas.style.marginLeft = "50px";
+canvas.style.marginTop = "-320px";
+
+
+
+var body = document.getElementsByTagName("body")[0];
+body.appendChild(canvas);
+cursorLayer = document.getElementById("CursorLayer");
+
+console.log(cursorLayer);
+
+
+
+var ctx = canvas.getContext("2d");
+
+while(x < 1590){
+  x = x + 10;
+  var h = Math.floor(Math.random() * 250);
+  if(h<20)
+  {
+    h = 40;
+  }
+  else if(h>90)
+  {
+   h = 50;
+  }
+  else
+  {
+  h = 90;
+  }
+  
+ctx.fillStyle = "rgba(210, 155, 173, 127)";
+ctx.fillRect(t, 100, 3, h);
+t = t + i;
+ctx.fillStyle = "rgba(0, 0, 0, 0)";
+ctx.fillRect(t, 110+h, 3, h);
+t = t + i + i;
+ctx.fillStyle = "rgba(210, 155, 173, 127)";
+ctx.fillRect(t, 60+h, 3, h);
+t = t + i + i + i;
+}
+
+/*function setup() {
+  createCanvas(3000, 400);
+  while(x < 600){
+  x = x + 10;
+    let r = random(255);
+  fill(204, 101, 192, 127);
+  noStroke();
+   rect(t,200,5,r);
+
+  noFill();
+  noStroke();
+    t = t + i;
+  rect(t,200,5,r);
+    fill(204, 101, 192, 127);
+  noStroke();
+    t = t + i + i;
+   rect(t,200,5,r);
+    t = t + i + i + i;
+  }
+  while(x < 600){
+  x = x + 10;
+    let r = random(255);
+  fill(204, 101, 192, 127);
+  noStroke();
+   rect(t,100,5,r);
+
+  noFill();
+  noStroke();
+    t = t + i;
+  rect(t,150,5,r);
+    fill(204, 101, 192, 127);
+  noStroke();
+    t = t + i + i;
+   rect(t,50,5,r);
+    t = t + i + i + i;
+  }
+}*/
+
+</script>
+<div class="progressbar">
+  <div class="progress" id="progress"></div>
+  </div>
+  <audio id="audio" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/Leo%20-%20Trying.mp3"></audio>
+   <button type="button" class="btn btn-outline-primary" onClick="togglePlay()" style="border-radius:25px;"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-pause play" viewBox="0 0 16 16">
+  <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"></path>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-pause pause" viewBox="0 0 16 16">
+  <path d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z"/>
+</svg></button>
+
+
+
+</center>
+</body>
+<script>
+var timer;
+var percent = 0;
+var audio = document.getElementById("audio");
+audio.addEventListener("playing", function(_event) {
+  var duration = _event.target.duration;
+  advance(duration, audio);
+});
+audio.addEventListener("pause", function(_event) {
+  clearTimeout(timer);
+});
+var advance = function(duration, element) {
+  var progress = document.getElementById("progress");
+  increment = 10/duration
+  percent = Math.min(increment * element.currentTime * 10, 100);
+  progress.style.width = percent+'%'
+  startTimer(duration, element);
+}
+var startTimer = function(duration, element){ 
+  if(percent < 100) {
+    timer = setTimeout(function (){advance(duration, element)}, 100);
+  }
+}
+$(".play").show();
+function togglePlay (e) {
+  e = e || window.event;
+  var btn = e.target;
+  if (!audio.paused) {
+    
+    audio.pause();
+	$(".play").show();
+	$(".pause").hide();
+    isPlaying = false;
+  } else {
+   
+    audio.play();
+	$(".pause").show();
+	$(".play").hide();
+    isPlaying = true;
+	
+  }
+  
+}
+
+
+</script>
+
+</html>
